@@ -15,6 +15,8 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @task.list_id = params[:list_id]
+# form remplis avec data présente, liste id
   end
 
   # GET /tasks/1/edit
