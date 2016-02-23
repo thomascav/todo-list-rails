@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   def index
     @lists = List.all
     @tasks = Task.all
-    
+
   end
 
   # GET /lists/1
@@ -62,6 +62,7 @@ class ListsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
       format.json { head :no_content }
+    @task.destroy
     end
   end
 
